@@ -1,9 +1,10 @@
-import SoptLogo from '@/assets/sopt_logo.svg';
 import Image from 'next/image';
+
+import SoptLogo from '@/assets/sopt_logo.svg';
 
 export default function Footer() {
   return (
-    <footer className="flex h-[21.3rem] flex-col justify-center gap-[2.4rem] bg-gray-900 px-[3rem]">
+    <footer className="mt-[2rem] flex h-[21.3rem] flex-col justify-center gap-[2.4rem] bg-gray-900 px-[3rem]">
       <div className="mt-[3.6rem]">
         <Image
           src={SoptLogo}

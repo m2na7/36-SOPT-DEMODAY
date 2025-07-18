@@ -1,7 +1,9 @@
+import { useRouter } from 'next/navigation';
+
+import { motion } from 'motion/react';
+
 import ProductCard from '@/components/card/ProductCard';
 import { MAKERS_PRODUCT } from '@/mocks/products';
-import { useRouter } from 'next/navigation';
-import { motion } from 'motion/react';
 
 export default function MakersSection() {
   const router = useRouter();

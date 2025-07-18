@@ -1,10 +1,18 @@
+import { useMemo } from 'react';
+
+import { useRouter } from 'next/navigation';
+
+import { motion } from 'motion/react';
+
 import ProductCard from '@/components/card/ProductCard';
 import { SOPTERM_PRODUCTS } from '@/mocks/products';
-import { useRouter } from 'next/navigation';
-import { motion } from 'motion/react';
 
 export default function SoptermSection() {
   const router = useRouter();
+
+  const shuffledProducts = useMemo(() => {
+    return [...SOPTERM_PRODUCTS].sort(() => Math.random() - 0.5);
+  }, []);
 
   return (
     <motion.section
@@ -19,7 +27,7 @@ export default function SoptermSection() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
       >
-        {SOPTERM_PRODUCTS.map((product, index) => (
+        {shuffledProducts.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 30 }}

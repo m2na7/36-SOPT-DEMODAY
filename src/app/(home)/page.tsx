@@ -1,15 +1,28 @@
 'use client';
 
-import { useTab } from '@/hooks/useTab';
+import { useEffect } from 'react';
+
+import { useSearchParams } from 'next/navigation';
+
+import { motion, AnimatePresence } from 'motion/react';
+
+import AppJamSection from '@/app/(home)/components/AppJamSection';
+import MakersSection from '@/app/(home)/components/MakersSection';
+import SoptermSection from '@/app/(home)/components/SoptermSection';
 import Tab from '@/components/tab/Tab';
 import { TABS } from '@/constants/tab';
-import AppJamSection from '@/app/(home)/components/AppJamSection';
-import SoptermSection from '@/app/(home)/components/SoptermSection';
-import MakersSection from '@/app/(home)/components/MakersSection';
-import { motion, AnimatePresence } from 'motion/react';
+import { useTab } from '@/hooks/useTab';
 
 export default function Home() {
   const { activeTab, setActiveTab } = useTab();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const tab = searchParams.get('tab');
+    if (tab === '앱잼') {
+      setActiveTab(TABS.APPJAM);
+    }
+  }, [searchParams, setActiveTab]);
 
   const renderContent = () => {
     switch (activeTab) {

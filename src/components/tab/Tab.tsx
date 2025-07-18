@@ -1,5 +1,6 @@
-import { TABS } from '@/constants/tab';
 import { motion } from 'motion/react';
+
+import { TABS } from '@/constants/tab';
 
 interface Props {
   activeTab: TABS;

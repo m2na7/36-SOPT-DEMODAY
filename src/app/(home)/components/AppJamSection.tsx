@@ -1,10 +1,19 @@
+import { useMemo } from 'react';
+
+import { useRouter } from 'next/navigation';
+
+import { motion } from 'motion/react';
+
 import ProductCard from '@/components/card/ProductCard';
 import { APPJAM_PRODUCTS } from '@/mocks/products';
-import { useRouter } from 'next/navigation';
-import { motion } from 'motion/react';
 
 export default function AppJamSection() {
   const router = useRouter();
+
+  const shuffledProducts = useMemo(() => {
+    return [...APPJAM_PRODUCTS].sort(() => Math.random() - 0.5);
+  }, []);
+
   return (
     <motion.section
       className="bg-black px-[2rem] py-[2.4rem]"
@@ -18,7 +27,7 @@ export default function AppJamSection() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
       >
-        {APPJAM_PRODUCTS.map((product, index) => (
+        {shuffledProducts.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 30 }}

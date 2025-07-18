@@ -1,17 +1,20 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useParams } from 'next/navigation';
+
+import { motion } from 'motion/react';
+
+import ArrowRight from '@/assets/arrow-up-line.svg';
+import ProfileCard from '@/components/card/ProfileCard';
 import {
   APPJAM_PRODUCTS,
   SOPTERM_PRODUCTS,
   MAKERS_PRODUCT,
 } from '@/mocks/products';
-import ProfileCard from '@/components/card/ProfileCard';
+
 import MemberSection from './components/MemberSection';
-import Link from 'next/link';
-import ArrowRight from '@/assets/arrow-up-line.svg';
-import { motion } from 'motion/react';
 
 export default function DetailPage() {
   const { name } = useParams();

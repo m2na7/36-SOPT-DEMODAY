@@ -1,10 +1,12 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
+
+import { motion } from 'motion/react';
+
 import MainLogo from '@/assets/main_logo.svg';
 import MenuOutline from '@/assets/menu_outline.svg';
-import Link from 'next/link';
-import { motion } from 'motion/react';
 
 export default function Header() {
   return (
