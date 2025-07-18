@@ -3,12 +3,16 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
 
 import ProductCard from '@/components/card/ProductCard';
+import { useImageLoader } from '@/hooks/useImageLoader';
 import { useShuffledProducts } from '@/hooks/useShuffledProducts';
-import { SOPTERM_PRODUCTS } from '@/mocks/products';
+import { APPJAM_PRODUCTS } from '@/mocks/products';
 
-export default function SoptermSection() {
+export default function AppJamSection() {
   const router = useRouter();
-  const shuffledProducts = useShuffledProducts(SOPTERM_PRODUCTS);
+  const shuffledProducts = useShuffledProducts(APPJAM_PRODUCTS);
+  const { allImagesLoaded } = useImageLoader({
+    imageUrls: shuffledProducts.map((product) => product.logoUrl),
+  });
 
   return (
     <motion.section
@@ -20,17 +24,24 @@ export default function SoptermSection() {
       <motion.div
         className="grid grid-cols-2 gap-x-[1.2rem] gap-y-[2.4rem]"
         initial={{ y: 50 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        animate={{ y: allImagesLoaded ? 0 : 50 }}
+        transition={{
+          duration: 0.6,
+          delay: allImagesLoaded ? 0.2 : 0,
+          ease: 'easeOut',
+        }}
       >
         {shuffledProducts.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{
+              opacity: allImagesLoaded ? 1 : 0,
+              y: allImagesLoaded ? 0 : 30,
+            }}
             transition={{
               duration: 0.5,
-              delay: index * 0.1,
+              delay: allImagesLoaded ? 0.4 + Math.floor(index / 2) * 0.1 : 0,
               ease: 'easeOut',
             }}
           >

@@ -17,13 +17,11 @@ export default function Header() {
       transition={{ duration: 0.5 }}
     >
       <Link href="/">
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Image
-            src={MainLogo}
-            alt="메인 로고"
-            className="w-[clamp(15.1rem,40.27vw,17.3rem)] cursor-pointer"
-          />
-        </motion.div>
+        <Image
+          src={MainLogo}
+          alt="메인 로고"
+          className="w-[clamp(15.1rem,40.27vw,17.3rem)] cursor-pointer"
+        />
       </Link>
 
       <Image

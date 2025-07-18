@@ -3,10 +3,14 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
 
 import ProductCard from '@/components/card/ProductCard';
+import { useImageLoader } from '@/hooks/useImageLoader';
 import { MAKERS_PRODUCT } from '@/mocks/products';
 
 export default function MakersSection() {
   const router = useRouter();
+  const { allImagesLoaded } = useImageLoader({
+    imageUrls: [MAKERS_PRODUCT.logoUrl],
+  });
 
   return (
     <motion.section
@@ -18,15 +22,22 @@ export default function MakersSection() {
       <motion.div
         className="grid grid-cols-2 gap-x-[1.2rem] gap-y-[2.4rem]"
         initial={{ y: 50 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        animate={{ y: allImagesLoaded ? 0 : 50 }}
+        transition={{
+          duration: 0.6,
+          delay: allImagesLoaded ? 0.2 : 0,
+          ease: 'easeOut',
+        }}
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{
+            opacity: allImagesLoaded ? 1 : 0,
+            y: allImagesLoaded ? 0 : 30,
+          }}
           transition={{
             duration: 0.5,
-            delay: 0,
+            delay: allImagesLoaded ? 0.4 : 0,
             ease: 'easeOut',
           }}
         >
