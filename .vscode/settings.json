@@ -40,5 +40,5 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["pretendard", "sopt"]
+  "cSpell.words": ["pretendard", "sopt", "AppJam", "Sopterm", "Makers"]
 }
