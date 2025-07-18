@@ -5,6 +5,7 @@ interface Props {
   category: string;
   description: string;
   imageUrl: string;
+  onClick: () => void;
 }
 
 export default function ProductCard({
@@ -12,9 +13,10 @@ export default function ProductCard({
   category,
   description,
   imageUrl,
+  onClick,
 }: Props) {
   return (
-    <div className="flex flex-col rounded-2xl">
+    <div className="flex flex-col rounded-2xl" onClick={onClick}>
       <div className="relative mb-[1.2rem] size-[clamp(16.2rem,43.2vw,18.6rem)] overflow-hidden rounded-lg">
         <Image src={imageUrl} alt={name} fill className="object-cover" />
       </div>

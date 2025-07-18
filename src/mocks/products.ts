@@ -4,84 +4,192 @@ export const APPJAM_PRODUCTS = [
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 2,
-    name: '하이링구얼',
-    category: '교육',
-    description: '일기로 시작하는 일상 속 영어 습관',
+    name: 'Lococo',
+    category: '쇼핑',
+    description: '일본에서 K-뷰티를 만나는 가장 빠른 방법, ロココ',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      WEB: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 3,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 4,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 5,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 6,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 7,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 8,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 9,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 10,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 11,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 12,
     name: '하이링구얼',
     category: '교육',
     description: '일기로 시작하는 일상 속 영어 습관',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
 ] as const;
 
@@ -91,14 +199,32 @@ export const SOPTERM_PRODUCTS = [
     name: '페스티메이트',
     category: '소셜 네트워킹',
     description: '페스티벌에서 나와 맞는 상대찾기',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
   {
     id: 2,
     name: 'MARIMO',
     category: '쇼핑',
     description: '오래도록 변치 않는, 사랑을 담다',
+    introduction:
+      '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
+    members: {
+      PLAN: ['김솝트', '이솝트'],
+      DESIGN: ['김솝트', '이솝트'],
+      ANDROID: ['김솝트', '이솝트'],
+      iOS: ['김솝트', '이솝트'],
+      SERVER: ['김솝트', '이솝트'],
+    },
   },
 ] as const;
 
@@ -107,5 +233,14 @@ export const MAKERS_PRODUCT = {
   name: 'SOPT Makers',
   category: '라이프스타일',
   description: 'SOPT를 더 SOPT답게',
+  introduction:
+    '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
   imageUrl: 'https://picsum.photos/200/200',
+  members: {
+    PLAN: ['김솝트', '이솝트'],
+    DESIGN: ['김솝트', '이솝트'],
+    ANDROID: ['김솝트', '이솝트'],
+    iOS: ['김솝트', '이솝트'],
+    SERVER: ['김솝트', '이솝트'],
+  },
 };
