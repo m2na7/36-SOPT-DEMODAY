@@ -10,7 +10,7 @@ export default function MemberSection({ members }: MemberSectionProps) {
           <p className="title3_m_14 w-[7.8rem] text-gray-200">{role}</p>
           <ul className="flex gap-[0.8rem]">
             {names.map((member) => (
-              <li key={member} className="body2_m_12 text-gray-200">
+              <li key={member} className="body2_r_14 text-gray-200">
                 {member}
               </li>
             ))}

@@ -23,14 +23,9 @@ export default function DetailPage() {
 
   if (!product) {
     return (
-      <motion.main
-        className="bg-black px-[2rem] py-[2.4rem] text-white"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <main className="bg-black px-[2rem] py-[2.4rem] text-white">
         <p>존재하지 않는 페이지입니다.</p>
-      </motion.main>
+      </main>
     );
   }
 
@@ -76,10 +71,11 @@ export default function DetailPage() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="335"
+          width="100%"
           height="2"
           viewBox="0 0 335 2"
           fill="none"
+          preserveAspectRatio="none"
         >
           <path d="M0 1H335" stroke="#3C3E41" strokeDasharray="3 3" />
         </svg>
@@ -91,7 +87,7 @@ export default function DetailPage() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.7 }}
       >
-        <h4 className="body3_r_12 text-white-50">{product.introduction}</h4>
+        <p className="body2_r_14 text-gray-200">{product.introduction}</p>
       </motion.div>
 
       <motion.div
