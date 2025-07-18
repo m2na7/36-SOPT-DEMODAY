@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import '@/styles/global.css';
+import ScrollToTop from '@/components/common/ScrollToTop';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="bg-black antialiased">
+        <ScrollToTop />
         <Header />
         {children}
         <Footer />

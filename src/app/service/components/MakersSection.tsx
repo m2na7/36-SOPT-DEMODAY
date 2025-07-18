@@ -49,7 +49,9 @@ export default function MakersSection() {
           <ProductCard
             key={MAKERS_PRODUCT.id}
             {...MAKERS_PRODUCT}
-            onClick={() => router.push(`/detail/${MAKERS_PRODUCT.name}`)}
+            onClick={() => {
+              window.location.href = 'https://makers.sopt.org';
+            }}
           />
         </motion.div>
       </motion.div>

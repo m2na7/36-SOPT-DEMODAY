@@ -10,7 +10,7 @@ import { motion } from 'motion/react';
 import MainLogo from '@/assets/main_logo.svg';
 import MenuOutline from '@/assets/menu_outline.svg';
 
-import Menu from './Menu';
+import Menu from '../menu/Menu';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -8,7 +8,8 @@ interface Props {
   name: string;
   category: string;
   description: string;
-  logoUrl: string;
+  thumbnailUrl?: string;
+  logoUrl?: string;
   onClick: () => void;
 }
 
@@ -16,6 +17,7 @@ export default function ProductCard({
   name,
   category,
   description,
+  thumbnailUrl,
   logoUrl,
   onClick,
 }: Props) {
@@ -33,7 +35,12 @@ export default function ProductCard({
       }}
     >
       <motion.div className="relative mb-[1.2rem] size-[clamp(16.2rem,43.2vw,18.6rem)] overflow-hidden rounded-lg">
-        <Image src={logoUrl} alt={name} fill className="object-cover" />
+        <Image
+          src={thumbnailUrl ?? logoUrl ?? ''}
+          alt={name}
+          fill
+          className="object-cover"
+        />
       </motion.div>
 
       <motion.div

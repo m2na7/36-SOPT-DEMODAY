@@ -45,12 +45,7 @@ export default function DetailPage() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <Image
-          src={product.logoUrl}
-          alt={product.name}
-          fill
-          className="object-cover"
-        />
+        <Image src={product.mainImageUrl} alt={product.name} fill />
       </motion.div>
 
       <motion.div
@@ -90,7 +85,9 @@ export default function DetailPage() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.7 }}
       >
-        <p className="body2_r_14 text-gray-200">{product.introduction}</p>
+        <p className="body2_r_14 whitespace-pre-line text-gray-200">
+          {product.introduction}
+        </p>
       </motion.div>
 
       <motion.div
@@ -101,16 +98,24 @@ export default function DetailPage() {
         <MemberSection members={product.members} />
       </motion.div>
 
-      {/* TODO: 이미지 추가 */}
       <motion.div
-        className="mt-[2.4rem] flex flex-col gap-[1.2rem]"
+        className="mt-[2.4rem] flex flex-col"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.9 }}
       >
-        <div className="w-[clamp(33.5rem, 89vw, 43rem)] relative mb-[2rem] aspect-[335/210] max-w-[100%] overflow-hidden">
-          <Image src={product.logoUrl} alt={product.name} fill />
-        </div>
+        {product.descriptionImageUrl.map((url, idx) => (
+          <div key={idx}>
+            <Image
+              src={url}
+              alt={`${product.name} 설명 이미지 ${idx + 1}`}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-auto w-auto max-w-full"
+            />
+          </div>
+        ))}
       </motion.div>
 
       <motion.div
