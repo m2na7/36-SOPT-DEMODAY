@@ -156,11 +156,11 @@ export const APPJAM_PRODUCTS = [
     ],
     service: '앱 서비스',
     members: {
-      PLAN: ['김솝트', '이솝트'],
-      DESIGN: ['김솝트', '이솝트', '김솝트', '이솝트'],
-      ANDROID: ['김솝트', '이솝트'],
-      iOS: ['김솝트', '이솝트'],
-      SERVER: ['김솝트', '이솝트'],
+      PLAN: ['최민주', '구나영'],
+      DESIGN: ['곽진주', '안세영'],
+      ANDROID: ['송민서', '김종우', '이지현', '김민지'],
+      iOS: ['김한열', '김나연', '이상엽'],
+      SERVER: ['곽재민', '이성민'],
     },
   },
   {
@@ -171,15 +171,15 @@ export const APPJAM_PRODUCTS = [
     introduction:
       '일본에서 K-뷰티를 만나는 가장 빠른 방법, 로코코\n\n로코코는 리뷰를 바탕으로 일본 진출을 희망파는 브랜드와 일본 고객을 연결합니다. ',
     logoUrl: '/assets/applogo_로코코.svg',
-    thumbnailUrl: '/assets/로코코_정사각형 썸네일.png',
-    mainImageUrl: '/assets/로코코_직사각형 썸네일.png',
+    thumbnailUrl: '/assets/applogo_로코코.svg',
+    mainImageUrl: '/assets/applogo_로코코.svg',
     descriptionImageUrl: [],
     service: '웹 서비스',
     members: {
-      PLAN: ['김솝트', '이솝트'],
-      DESIGN: ['김솝트', '이솝트'],
-      WEB: ['김솝트', '이솝트'],
-      SERVER: ['김솝트', '이솝트'],
+      PLAN: ['김민희', '이주영', '장유빈'],
+      DESIGN: ['하서은', '유지현', '권민재'],
+      WEB: ['김정은', '고제성', '이재훈', '권동희', '정희연'],
+      SERVER: ['이지훈', '박성제', '주효은'],
     },
   },
   {
@@ -261,7 +261,7 @@ export const APPJAM_PRODUCTS = [
     description: '그토록 원하던 목표에 다가갈 방법, NINE DOT',
     introduction:
       '매번 목표를 세우지만 금방 포기하게 되셨나요?\n\nNiNE DOT은 만다라트 기반 구조에 AI 추천 기능을 더해, 사용자의 성향에 맞춘 맞춤형 목표 설정과 할 일 생성을 도와주는 목표 관리 서비스입니다.\n\n이제는 NiNE DOT로 할 일 실천부터 목표 달성까지 함께해보세요!',
-    logoUrl: '/assets/applogo_NINEDOT.svg',
+    logoUrl: '/assets/applogo_NiNEDOT.svg',
     thumbnailUrl: '/assets/나인도트_정사각형 썸네일.png',
     mainImageUrl: '/assets/나인도트_직사각형 썸네일.png',
     descriptionImageUrl: [
@@ -287,15 +287,15 @@ export const APPJAM_PRODUCTS = [
     introduction:
       '1인 가구를 위한 우리 집 맞춤형 AI 스타일링 서비스, 하우미 하우미는 사용자의 도면, 취향, 라이프스타일 정보를 바탕으로 AI가 나만의 인테리어 이미지를 생성하고, 구매 가능한 가구 리스트를 제시해 공간 변화를 쉽게 시작할 수 있도록 돕습니다.',
     logoUrl: '/assets/applogo_하우미.svg',
-    thumbnailUrl: '/assets/하우미_정사각형 썸네일.png',
-    mainImageUrl: '/assets/하우미_직사각형 썸네일.png',
+    thumbnailUrl: '/assets/applogo_하우미.svg',
+    mainImageUrl: '/assets/applogo_하우미.svg',
     descriptionImageUrl: [],
     service: '웹 서비스',
     members: {
-      PLAN: ['김솝트', '이솝트'],
-      DESIGN: ['김솝트', '이솝트'],
-      WEB: ['김솝트', '이솝트'],
-      SERVER: ['김솝트', '이솝트'],
+      PLAN: ['최윤아', '권민성'],
+      DESIGN: ['인하은', '안세은', '유해인'],
+      WEB: ['엄경호', '박소이', '임지성', '조성하', '문혜성'],
+      SERVER: ['전재연', '구본탁', '임채륜'],
     },
   },
 ] as const;
@@ -317,10 +317,10 @@ export const SOPTERM_PRODUCTS = [
       '/assets/페스티메이트-3.png',
     ],
     members: {
-      PLAN: ['김솝트', '이솝트'],
-      DESIGN: ['김솝트', '이솝트'],
-      WEB: ['김솝트', '이솝트'],
-      SERVER: ['김솝트', '이솝트'],
+      PLAN: ['김희은'],
+      DESIGN: ['김민서'],
+      WEB: ['윤기훈', '김규태'],
+      SERVER: ['이현진'],
     },
   },
   {

@@ -123,7 +123,10 @@ export default function DetailPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.0 }}
       >
-        <Link href="/" className="mt-[3.8rem] mb-[4rem] flex justify-center">
+        <Link
+          href="/service"
+          className="mt-[3.8rem] mb-[4rem] flex justify-center"
+        >
           <motion.button
             className="title1_sb_18 bg-navy5 text-navy1 flex h-[clamp(50px,14.4vw,62px)] w-[clamp(320px,85.33vw,366px)] cursor-pointer items-center justify-center gap-[0.4rem] rounded-[clamp(27px,7.2vw,50px)]"
             whileHover={{ scale: 1.05 }}
