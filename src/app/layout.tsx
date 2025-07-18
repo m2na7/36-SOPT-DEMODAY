@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '@/styles/global.css';
 import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 
 export const metadata: Metadata = {
   title: 'SOPT 36th Demo Day',
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className="antialiased">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
