@@ -22,6 +22,12 @@
   },
   "css.validate": false,
   "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.next/**"
+  ],
+  "tailwindCSS.experimental.configFile": "src/styles/global.css",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
