@@ -20,8 +20,12 @@ export default function ProductCard({
       </div>
 
       <div className="mb-[1rem] flex items-end gap-[1rem]">
-        <h3 className="title2_sb_16 text-white">{name}</h3>
-        <p className="caption1_m_11 text-white-70">{category}</p>
+        <h3 className="title2_sb_16 text-ellipsis whitespace-nowrap text-white">
+          {name}
+        </h3>
+        <p className="caption1_m_11 text-white-70 text-ellipsis whitespace-nowrap">
+          {category}
+        </p>
       </div>
       <p className="body3_r_12 text-white">{description}</p>
     </div>

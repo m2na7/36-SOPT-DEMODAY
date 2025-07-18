@@ -83,4 +83,29 @@ export const APPJAM_PRODUCTS = [
     description: '일기로 시작하는 일상 속 영어 습관',
     imageUrl: 'https://picsum.photos/200/200',
   },
-];
+] as const;
+
+export const SOPTERM_PRODUCTS = [
+  {
+    id: 1,
+    name: '페스티메이트',
+    category: '소셜 네트워킹',
+    description: '페스티벌에서 나와 맞는 상대찾기',
+    imageUrl: 'https://picsum.photos/200/200',
+  },
+  {
+    id: 2,
+    name: 'MARIMO',
+    category: '쇼핑',
+    description: '오래도록 변치 않는, 사랑을 담다',
+    imageUrl: 'https://picsum.photos/200/200',
+  },
+] as const;
+
+export const MAKERS_PRODUCT = {
+  id: 1,
+  name: 'SOPT Makers',
+  category: '라이프스타일',
+  description: 'SOPT를 더 SOPT답게',
+  imageUrl: 'https://picsum.photos/200/200',
+};
