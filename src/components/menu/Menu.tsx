@@ -36,7 +36,7 @@ export default function Menu({ isOpen, onClose }: Props) {
               <Link
                 href="/"
                 className={`active:text-navy5 flex h-[60px] items-center border-b border-gray-800 px-[2rem] transition-colors hover:bg-gray-900 ${
-                  pathname === '/' ? 'bg-gray-900' : ''
+                  pathname === '/' ? 'text-navy5' : ''
                 }`}
                 onClick={onClose}
               >
