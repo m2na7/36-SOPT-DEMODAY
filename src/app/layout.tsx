@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import '../styles/global.css';
-import Header from '@/components/Header';
+import '@/styles/global.css';
+import Header from '@/components/header/Header';
 
 export const metadata: Metadata = {
   title: 'SOPT 36th Demo Day',
