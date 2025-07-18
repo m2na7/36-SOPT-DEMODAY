@@ -30,7 +30,7 @@ export default function SoptermSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
-              delay: Math.floor(index / 2) * 0.1,
+              delay: index * 0.1,
               ease: 'easeOut',
             }}
           >

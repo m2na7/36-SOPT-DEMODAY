@@ -31,9 +31,6 @@ export default function ProductCard({
         scale: 0.95,
         transition: { duration: 0.1 },
       }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <motion.div className="relative mb-[1.2rem] size-[clamp(16.2rem,43.2vw,18.6rem)] overflow-hidden rounded-lg">
         <Image src={logoUrl} alt={name} fill className="object-cover" />
