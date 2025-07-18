@@ -2,9 +2,9 @@
 
 import { motion, AnimatePresence } from 'motion/react';
 
-import AppJamSection from '@/app/home/components/AppJamSection';
-import MakersSection from '@/app/home/components/MakersSection';
-import SoptermSection from '@/app/home/components/SoptermSection';
+import AppJamSection from '@/app/service/components/AppJamSection';
+import MakersSection from '@/app/service/components/MakersSection';
+import SoptermSection from '@/app/service/components/SoptermSection';
 import Tab from '@/components/tab/Tab';
 import { TABS } from '@/constants/tab';
 import { useTab } from '@/hooks/useTab';

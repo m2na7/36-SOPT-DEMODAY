@@ -1,22 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
-interface UseImageLoaderProps {
+interface Props {
   imageUrls: string[];
   delay?: number;
 }
 
-export const useImageLoader = ({
-  imageUrls,
-  delay = 0,
-}: UseImageLoaderProps) => {
+export const useImageLoader = ({ imageUrls, delay = 0 }: Props) => {
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
   const [allImagesLoaded, setAllImagesLoaded] = useState(false);
+
+  const imageUrlsString = useMemo(() => JSON.stringify(imageUrls), [imageUrls]);
 
   useEffect(() => {
     if (imageUrls.length === 0) {
       setAllImagesLoaded(true);
       return;
     }
+
+    setLoadedImages(new Set());
+    setAllImagesLoaded(false);
 
     const loadImage = (url: string): Promise<void> => {
       return new Promise((resolve) => {
@@ -46,7 +48,7 @@ export const useImageLoader = ({
     };
 
     loadAllImages();
-  }, [imageUrls, delay]);
+  }, [imageUrlsString, delay]);
 
   return {
     loadedImages,

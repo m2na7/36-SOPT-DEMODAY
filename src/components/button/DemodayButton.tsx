@@ -21,7 +21,7 @@ export default function DemodayButton() {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <Link href="/home">
+      <Link href="/service">
         <motion.button
           className="title1_sb_18 bg-navy5 text-navy1 hover:bg-navy4 active:bg-navy3 flex h-[clamp(50px,14.4vw,62px)] w-[clamp(320px,85.33vw,366px)] cursor-pointer items-center justify-center gap-[0.4rem] rounded-[clamp(27px,7.2vw,50px)] transition-colors duration-300"
           whileHover={{ scale: 1.02 }}
