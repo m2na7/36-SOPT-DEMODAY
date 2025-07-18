@@ -43,7 +43,7 @@ export default function DetailPage() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <Image
-          src={product.imageUrl}
+          src={product.logoUrl}
           alt={product.name}
           fill
           className="object-cover"
@@ -59,7 +59,7 @@ export default function DetailPage() {
           name={product.name}
           category={product.category}
           // service={product.service}
-          imageUrl={product.imageUrl}
+          logoUrl={product.logoUrl}
         />
       </motion.div>
 
@@ -106,7 +106,7 @@ export default function DetailPage() {
         transition={{ duration: 0.5, delay: 0.9 }}
       >
         <div className="w-[clamp(33.5rem, 89vw, 43rem)] relative mb-[2rem] aspect-[335/210] max-w-[100%] overflow-hidden">
-          <Image src={product.imageUrl} alt={product.name} fill />
+          <Image src={product.logoUrl} alt={product.name} fill />
         </div>
       </motion.div>
 

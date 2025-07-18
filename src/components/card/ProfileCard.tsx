@@ -4,19 +4,19 @@ interface Props {
   name: string;
   category: string;
   service?: '앱 서비스' | '웹 서비스';
-  imageUrl: string;
+  logoUrl: string;
 }
 
 export default function ProfileCard({
   name,
   category,
   service = '앱 서비스',
-  imageUrl,
+  logoUrl,
 }: Props) {
   return (
     <div className="flex flex-col rounded-[10px]">
       <div className="relative mb-[1.2rem] size-[clamp(6rem,16vw,6.88rem)] overflow-hidden rounded-lg">
-        <Image src={imageUrl} alt={name} fill className="object-cover" />
+        <Image src={logoUrl} alt={name} fill className="object-cover" />
       </div>
       <h1 className="title2_sb_16 text-ellipsis whitespace-nowrap text-white">
         {name}

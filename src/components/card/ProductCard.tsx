@@ -7,7 +7,7 @@ interface Props {
   name: string;
   category: string;
   description: string;
-  imageUrl: string;
+  logoUrl: string;
   onClick: () => void;
 }
 
@@ -15,7 +15,7 @@ export default function ProductCard({
   name,
   category,
   description,
-  imageUrl,
+  logoUrl,
   onClick,
 }: Props) {
   return (
@@ -35,7 +35,7 @@ export default function ProductCard({
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <motion.div className="relative mb-[1.2rem] size-[clamp(16.2rem,43.2vw,18.6rem)] overflow-hidden rounded-lg">
-        <Image src={imageUrl} alt={name} fill className="object-cover" />
+        <Image src={logoUrl} alt={name} fill className="object-cover" />
       </motion.div>
 
       <motion.div
