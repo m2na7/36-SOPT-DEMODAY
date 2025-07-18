@@ -1,12 +1,37 @@
+'use client';
+
+import { useRef } from 'react';
+
+import { motion, useInView } from 'motion/react';
+
 export default function DescriptionSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
   return (
-    <section className="px-[2rem]">
-      <h1 className="title1_sb_18 mb-[2rem]">
+    <motion.section
+      ref={ref}
+      className="px-[2rem]"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
+      <motion.h1
+        className="title1_sb_18 mb-[2rem]"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      >
         Momentum: <br />
         축적된 움직임이 그려낸 단 하나의 궤도
-      </h1>
+      </motion.h1>
 
-      <div className="body2_r_14">
+      <motion.div
+        className="body2_r_14"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+      >
         <p>
           국내 최대 규모 대학생연합 IT벤처창업 동아리 SOPT에서 데모데이
           &lt;Momentum: 축적된 움직임이 그려낸 단 하나의 궤도&gt;를 개최합니다.
@@ -19,7 +44,7 @@ export default function DescriptionSection() {
         </p>
         <br />
         <p>
-          이번 36기 앱잼 데모데이 ‘Momentum:’에서는 물체가 한 방향으로
+          이번 36기 앱잼 데모데이 &apos;Momentum:&apos;에서는 물체가 한 방향으로
           지속적으로 변동하는 모습에서 비롯하여 오늘날의 데모데이가 여러분에게
           한 번 더 추진력을 얻어 앞으로 나아갈 수 있는 계기가 되어볼 수 있기를
           바래봅니다.
@@ -30,7 +55,7 @@ export default function DescriptionSection() {
           모여 단 하나의 프로덕트로 빛날 수 있도록, 우리는 오늘도 한 걸음 앞으로
           나아갑니다.
         </p>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
