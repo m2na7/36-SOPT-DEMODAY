@@ -7,11 +7,12 @@ import {
 } from '@/mocks/products';
 
 interface Props {
-  params: { name: string };
+  params: Promise<{ name: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const decodedName = decodeURIComponent(params.name);
+  const { name } = await params;
+  const decodedName = decodeURIComponent(name);
   const allProducts = [...APPJAM_PRODUCTS, ...SOPTERM_PRODUCTS, MAKERS_PRODUCT];
   const product = allProducts.find((p) => p.name === decodedName);
 
