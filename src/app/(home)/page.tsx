@@ -1,9 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
-
-import { useSearchParams } from 'next/navigation';
-
 import { motion, AnimatePresence } from 'motion/react';
 
 import AppJamSection from '@/app/(home)/components/AppJamSection';
@@ -15,14 +11,6 @@ import { useTab } from '@/hooks/useTab';
 
 export default function Home() {
   const { activeTab, setActiveTab } = useTab();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const tab = searchParams.get('tab');
-    if (tab === '앱잼') {
-      setActiveTab(TABS.APPJAM);
-    }
-  }, [searchParams, setActiveTab]);
 
   const renderContent = () => {
     switch (activeTab) {

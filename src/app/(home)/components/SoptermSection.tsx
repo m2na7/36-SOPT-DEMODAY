@@ -1,18 +1,14 @@
-import { useMemo } from 'react';
-
 import { useRouter } from 'next/navigation';
 
 import { motion } from 'motion/react';
 
 import ProductCard from '@/components/card/ProductCard';
+import { useShuffledProducts } from '@/hooks/useShuffledProducts';
 import { SOPTERM_PRODUCTS } from '@/mocks/products';
 
 export default function SoptermSection() {
   const router = useRouter();
-
-  const shuffledProducts = useMemo(() => {
-    return [...SOPTERM_PRODUCTS].sort(() => Math.random() - 0.5);
-  }, []);
+  const shuffledProducts = useShuffledProducts(SOPTERM_PRODUCTS);
 
   return (
     <motion.section
