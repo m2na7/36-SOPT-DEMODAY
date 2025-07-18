@@ -1,11 +1,11 @@
 import { TABS } from '@/constants/tab';
 
-interface TabProps {
+interface Props {
   activeTab: TABS;
   onTabChange: (tab: TABS) => void;
 }
 
-export default function Tab({ activeTab, onTabChange }: TabProps) {
+export default function Tab({ activeTab, onTabChange }: Props) {
   const tabs: TABS[] = [TABS.APPJAM, TABS.SOPTERM, TABS.MAKERS];
 
   return (
