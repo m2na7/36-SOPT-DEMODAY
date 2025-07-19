@@ -123,7 +123,7 @@ export const APPJAM_PRODUCTS = [
       '경조사비, 매번 검색하거나 감으로 정하시나요?\n\n봉투백서는 수입, 경조사 대상과의 관계, 친밀도, 경조사 종류 등을 고려해 맞춤형 경조사비 금액을 추천하고, 다가올 경조사 일정과 다녀온 행사 내역까지 한번에 관리할 수 있는 서비스에요.\n\n경조사에 대한 막연한 고민을 덜고 적절한 마음으로 큰 진심을 전할 수 있도록, 봉투백서가 도와드릴게요!',
     logoUrl: '/assets/applogo_봉투백서.svg',
     thumbnailUrl: '/assets/봉투백서_정사각형 썸네일.png',
-    mainImageUrl: '/assets/봉투백서_정사각형 썸네일.png',
+    mainImageUrl: '/assets/봉투백서_직사각형 썸네일.jpg',
     descriptionImageUrl: [
       '/assets/봉투백서-1.png',
       '/assets/봉투백서-2.png',
@@ -171,8 +171,8 @@ export const APPJAM_PRODUCTS = [
     introduction:
       '일본에서 K-뷰티를 만나는 가장 빠른 방법, 로코코\n\n로코코는 리뷰를 바탕으로 일본 진출을 희망파는 브랜드와 일본 고객을 연결합니다. ',
     logoUrl: '/assets/applogo_로코코.svg',
-    thumbnailUrl: '/assets/applogo_로코코.svg',
-    mainImageUrl: '/assets/applogo_로코코.svg',
+    thumbnailUrl: '/assets/Lococo_썸네일_정사각형.png',
+    mainImageUrl: '/assets/Lococo_썸네일_직사각형.png',
     descriptionImageUrl: [],
     service: '웹 서비스',
     members: {
@@ -287,8 +287,8 @@ export const APPJAM_PRODUCTS = [
     introduction:
       '1인 가구를 위한 우리 집 맞춤형 AI 스타일링 서비스, 하우미 하우미는 사용자의 도면, 취향, 라이프스타일 정보를 바탕으로 AI가 나만의 인테리어 이미지를 생성하고, 구매 가능한 가구 리스트를 제시해 공간 변화를 쉽게 시작할 수 있도록 돕습니다.',
     logoUrl: '/assets/applogo_하우미.svg',
-    thumbnailUrl: '/assets/applogo_하우미.svg',
-    mainImageUrl: '/assets/applogo_하우미.svg',
+    thumbnailUrl: '/assets/1080.png',
+    mainImageUrl: '/assets/1440.png',
     descriptionImageUrl: [],
     service: '웹 서비스',
     members: {
