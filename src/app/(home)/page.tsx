@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
+import LinkButton from '@/components/button/LinkButton';
+
 import DescriptionSection from './components/DescriptionSection';
-import GoDemodayButton from './components/GoDemodayButton';
 import ImageSection from './components/ImageSection';
 import IntroduceSection from './components/IntroduceSection';
 
@@ -32,7 +33,7 @@ export default function HomePage() {
 
       <DescriptionSection />
 
-      <GoDemodayButton />
+      <LinkButton withInViewAnimation={false} animationDelay={0.6} />
 
       <div className="h-[0.05rem] bg-white" />
 

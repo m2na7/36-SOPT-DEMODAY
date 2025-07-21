@@ -316,6 +316,7 @@ export const SOPTERM_PRODUCTS = [
       '/assets/페스티메이트-2.png',
       '/assets/페스티메이트-3.png',
     ],
+    service: '웹 서비스',
     members: {
       PLAN: ['김희은'],
       DESIGN: ['김민서'],
@@ -334,6 +335,7 @@ export const SOPTERM_PRODUCTS = [
     thumbnailUrl: '/assets/Marimo-1.png',
     mainImageUrl: '/assets/Marimo-2.png',
     descriptionImageUrl: ['/assets/Marimo-3.png'],
+    service: '웹 서비스',
     members: {
       PLAN: ['손지유'],
       DESIGN: ['장세희', '권재희'],
@@ -351,7 +353,7 @@ export const MAKERS_PRODUCT = {
   introduction:
     '일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관 일기로 시작하는 일상 속 영어 습관',
   logoUrl: '/assets/applogo_makers.svg',
-
+  service: '웹 서비스',
   mainImageUrl: '/assets/SOPT Makers_직사각형 썸네일.png',
   descriptionImageUrl: [],
   members: {

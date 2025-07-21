@@ -1,12 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
 import { motion } from 'motion/react';
 
-import ArrowRight from '@/assets/arrow-up-line.svg';
+import LinkButton from '@/components/button/LinkButton';
 import ProfileCard from '@/components/card/ProfileCard';
 import {
   APPJAM_PRODUCTS,
@@ -56,7 +55,7 @@ export default function DetailPage() {
         <ProfileCard
           name={product.name}
           category={product.category}
-          // service={product.service}
+          service={product.service as '앱 서비스' | '웹 서비스'}
           logoUrl={product.logoUrl}
         />
       </motion.div>
@@ -112,7 +111,7 @@ export default function DetailPage() {
               width={0}
               height={0}
               sizes="100vw"
-              className="h-auto w-auto max-w-full"
+              className="h-auto w-full object-contain"
             />
           </div>
         ))}
@@ -123,23 +122,9 @@ export default function DetailPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.0 }}
       >
-        <Link
-          href="/service"
-          className="mt-[3.8rem] mb-[4rem] flex justify-center"
-        >
-          <motion.button
-            className="title1_sb_18 bg-navy5 text-navy1 flex h-[clamp(50px,14.4vw,62px)] w-[clamp(320px,85.33vw,366px)] cursor-pointer items-center justify-center gap-[0.4rem] rounded-[clamp(27px,7.2vw,50px)]"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            다른 데모데이 서비스 보러 가기
-            <Image
-              src={ArrowRight}
-              alt="arrow-right"
-              className="h-[2.4rem] w-[2.4rem]"
-            />
-          </motion.button>
-        </Link>
+        <div className="mt-[3.8rem] mb-[4rem] flex justify-center">
+          <LinkButton withInViewAnimation={false} animationDelay={0.6} />
+        </div>
       </motion.div>
     </motion.main>
   );
