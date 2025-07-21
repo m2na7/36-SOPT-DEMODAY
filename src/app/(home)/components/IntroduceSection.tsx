@@ -41,7 +41,7 @@ export default function IntroduceSection() {
         </p>
       </FadeInView>
 
-      <FadeInView delay={0.8}>
+      <FadeInView delay={0.6}>
         <Image
           src={ImgAppjam}
           alt="앱잼 포스터"
@@ -49,7 +49,7 @@ export default function IntroduceSection() {
         />
       </FadeInView>
 
-      <FadeInView className="mt-[2rem]" delay={1.0}>
+      <FadeInView className="mt-[2rem]" delay={0.6}>
         <h3 className="title1_sb_18 mb-[1.2rem]">Shout Our Passion Together</h3>
         <p className="body3_r_12 text-white-70">
           SOPT(솝트)는 국내 최대 규모의 <br />
@@ -70,7 +70,7 @@ export default function IntroduceSection() {
         </p>
       </FadeInView>
 
-      <FadeInView className="flex justify-center" delay={1.2}>
+      <FadeInView className="flex justify-center" delay={0.8}>
         <Image
           src={ImgCircular}
           alt="구분선"
@@ -80,7 +80,7 @@ export default function IntroduceSection() {
 
       <FadeInView
         className="flex flex-col items-end justify-end gap-[1.2rem]"
-        delay={1.4}
+        delay={0.6}
       >
         <div className="flex gap-[1.6rem]">
           <p className="body2_r_14 text-white-70">SOPT website</p>
@@ -98,7 +98,7 @@ export default function IntroduceSection() {
         </div>
       </FadeInView>
 
-      <FadeInView delay={1.6}>
+      <FadeInView delay={0.6}>
         <h4 className="body3_r_12 text-white-50 mt-[4rem]">후원사 및 협력사</h4>
 
         <Image

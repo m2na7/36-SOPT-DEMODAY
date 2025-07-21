@@ -40,6 +40,7 @@ export default function ProductCard({
           src={thumbnailUrl ?? logoUrl ?? ''}
           alt={name}
           fill
+          sizes="186px"
           className="object-cover"
         />
       </div>

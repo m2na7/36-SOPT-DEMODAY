@@ -7,7 +7,7 @@ import FadeIn from '@/components/common/FadeIn';
 
 export default function ImageSection() {
   return (
-    <FadeIn duration={0.8}>
+    <FadeIn duration={0.8} delay={0.3}>
       <Image
         src={ImgPoster}
         alt="포스터"

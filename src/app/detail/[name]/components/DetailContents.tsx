@@ -26,7 +26,13 @@ export default function DetailContents({ product }: Props) {
         duration={0.6}
         delay={0.2}
       >
-        <Image src={product.mainImageUrl} alt={product.name} fill />
+        <Image
+          src={product.mainImageUrl}
+          alt={product.name}
+          fill
+          priority
+          sizes="100vw"
+        />
       </FadeIn>
 
       <FadeIn distance={20} delay={0.4}>
