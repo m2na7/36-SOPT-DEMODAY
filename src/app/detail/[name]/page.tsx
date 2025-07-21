@@ -1,107 +1,65 @@
-'use client';
+import { notFound } from 'next/navigation';
 
-import Image from 'next/image';
-import { useParams } from 'next/navigation';
+import type { Metadata } from 'next';
 
-import LinkButton from '@/components/button/LinkButton';
-import ProfileCard from '@/components/card/ProfileCard';
-import FadeIn from '@/components/common/FadeIn';
 import {
   APPJAM_PRODUCTS,
   SOPTERM_PRODUCTS,
   MAKERS_PRODUCT,
 } from '@/mocks/products';
 
-import MemberSection from './components/MemberSection';
+import DetailContents from './components/DetailContents';
 
-export default function DetailPage() {
-  const { name } = useParams();
+interface Props {
+  params: Promise<{ name: string }>;
+}
 
-  const decodedName = decodeURIComponent(name as string);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { name } = await params;
+  const decodedName = decodeURIComponent(name);
 
   const allProducts = [...APPJAM_PRODUCTS, ...SOPTERM_PRODUCTS, MAKERS_PRODUCT];
   const product = allProducts.find((p) => p.name === decodedName);
 
   if (!product) {
-    return (
-      <main className="bg-black px-[2rem] py-[2.4rem] text-white">
-        <p>존재하지 않는 페이지입니다.</p>
-      </main>
-    );
+    return {
+      title: '존재하지 않는 페이지',
+      description: 'SOPT 데모데이',
+    };
   }
 
-  return (
-    <FadeIn
-      className="bg-black px-[2rem] py-[2.4rem] text-white"
-      distance={0}
-      duration={0.5}
-    >
-      <FadeIn
-        className="w-[clamp(33.5rem, 89vw, 43rem)] relative mb-[2rem] aspect-[335/210] max-w-[100%] overflow-hidden rounded-[5px]"
-        variant="scaleIn"
-        duration={0.6}
-        delay={0.2}
-      >
-        <Image src={product.mainImageUrl} alt={product.name} fill />
-      </FadeIn>
+  return {
+    title: `SOPT 데모데이 - ${product.name}`,
+    description: product.description,
+    keywords: [product.name, 'SOPT', 'AT SOPT', '데모데이', '36기', '앱잼'],
+    openGraph: {
+      title: `SOPT 데모데이 - ${product.name}`,
+      description: product.description,
+      images: [product.mainImageUrl],
+      url: `https://demoday-at.sopt.org/detail/${encodeURIComponent(product.name)}`,
+      siteName: 'SOPT 데모데이',
+      locale: 'ko_KR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `SOPT 데모데이 - ${product.name}`,
+      description: product.description,
+      images: [product.mainImageUrl],
+    },
+  };
+}
 
-      <FadeIn distance={20} delay={0.4}>
-        <ProfileCard
-          name={product.name}
-          category={product.category}
-          service={product.service as '앱 서비스' | '웹 서비스'}
-          logoUrl={product.logoUrl}
-        />
-      </FadeIn>
+export default async function DetailPage({ params }: Props) {
+  const { name } = await params;
+  const decodedName = decodeURIComponent(name);
 
-      <FadeIn className="my-[1.6rem]" variant="scaleInX" delay={0.6}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="100%"
-          height="2"
-          viewBox="0 0 335 2"
-          fill="none"
-          preserveAspectRatio="none"
-        >
-          <path d="M0 1H335" stroke="#3C3E41" strokeDasharray="3 3" />
-        </svg>
-      </FadeIn>
+  const allProducts = [...APPJAM_PRODUCTS, ...SOPTERM_PRODUCTS, MAKERS_PRODUCT];
+  const product = allProducts.find((p) => p.name === decodedName);
 
-      <FadeIn
-        className="flex items-center gap-[0.6rem]"
-        variant="fadeInRight"
-        distance={20}
-        delay={0.7}
-      >
-        <p className="body2_r_14 whitespace-pre-line text-gray-200">
-          {product.introduction}
-        </p>
-      </FadeIn>
+  if (!product) {
+    notFound();
+  }
 
-      <FadeIn delay={0.8}>
-        <MemberSection members={product.members} />
-      </FadeIn>
-
-      <FadeIn className="mt-[2.4rem] flex flex-col" delay={0.9}>
-        {product.descriptionImageUrl.map((url, idx) => (
-          <div key={idx}>
-            <Image
-              src={url}
-              alt={`${product.name} 설명 이미지 ${idx + 1}`}
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        ))}
-      </FadeIn>
-
-      <FadeIn delay={1.0}>
-        <div className="mt-[3.8rem] mb-[4rem] flex justify-center">
-          <LinkButton withInViewAnimation={false} animationDelay={0.6} />
-        </div>
-      </FadeIn>
-    </FadeIn>
-  );
+  return <DetailContents product={product} />;
 }

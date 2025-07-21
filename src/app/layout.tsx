@@ -10,9 +10,23 @@ import Header from '@/components/header/Header';
 export const metadata: Metadata = {
   title: 'SOPT 데모데이',
   description: '36기 AT SOPT 데모데이',
-  keywords: ['SOPT', '데모데이', '36기', '서비스', '개발', '디자인'],
+  keywords: [
+    'SOPT',
+    'AT SOPT',
+    '데모데이',
+    '36기',
+    '앱잼',
+    '서비스',
+    '개발',
+    '디자인',
+  ],
   icons: {
-    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
   openGraph: {
     title: 'SOPT 데모데이',
@@ -53,6 +67,7 @@ export default function RootLayout({
             gtag('config', 'G-RQS707NM5T');
           `}
         </Script>
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="bg-black antialiased">
         <ScrollToTop />
