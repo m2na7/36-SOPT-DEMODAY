@@ -26,22 +26,23 @@ export default function ProductCard({
       className="flex cursor-pointer flex-col rounded-2xl"
       onClick={onClick}
       whileHover={{
-        scale: 1.05,
+        scale: 1.04,
         transition: { duration: 0.3, ease: 'easeOut' },
       }}
       whileTap={{
-        scale: 0.95,
-        transition: { duration: 0.1 },
+        scale: 0.96,
+        transition: { duration: 0.2, ease: 'easeOut' },
       }}
+      style={{ touchAction: 'manipulation' }}
     >
-      <motion.div className="relative mb-[1.2rem] size-[clamp(16.2rem,43.2vw,18.6rem)] overflow-hidden rounded-lg">
+      <div className="relative mb-[1.2rem] size-[clamp(16.2rem,43.2vw,18.6rem)] overflow-hidden rounded-lg">
         <Image
           src={thumbnailUrl ?? logoUrl ?? ''}
           alt={name}
           fill
           className="object-cover"
         />
-      </motion.div>
+      </div>
 
       <motion.div
         className="mb-[1rem] flex items-end gap-[1rem]"
@@ -55,7 +56,7 @@ export default function ProductCard({
           {category}
         </p>
       </motion.div>
-      <motion.p className="body3_r_12 text-white">{description}</motion.p>
+      <p className="body3_r_12 text-white">{description}</p>
     </motion.div>
   );
 }

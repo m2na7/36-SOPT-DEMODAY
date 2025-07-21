@@ -1,15 +1,15 @@
 'use client';
 
-import { motion, AnimatePresence } from 'motion/react';
-
 import AppJamSection from '@/app/service/components/AppJamSection';
 import MakersSection from '@/app/service/components/MakersSection';
 import SoptermSection from '@/app/service/components/SoptermSection';
+import FadeIn from '@/components/common/FadeIn';
+import FadeInTransition from '@/components/common/FadeInTransition';
 import Tab from '@/components/tab/Tab';
 import { TABS } from '@/constants/tab';
 import { useTab } from '@/hooks/useTab';
 
-export default function Home() {
+export default function ServicePage() {
   const { activeTab, setActiveTab } = useTab();
 
   const renderContent = () => {
@@ -26,26 +26,13 @@ export default function Home() {
   };
 
   return (
-    <motion.div
-      className="min-h-screen bg-black"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <FadeIn className="min-h-screen bg-black" variant="fadeIn" duration={0.5}>
       <Tab activeTab={activeTab} onTabChange={setActiveTab} />
       <div className="bg-black">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-          >
-            {renderContent()}
-          </motion.div>
-        </AnimatePresence>
+        <FadeInTransition animationKey={activeTab}>
+          {renderContent()}
+        </FadeInTransition>
       </div>
-    </motion.div>
+    </FadeIn>
   );
 }

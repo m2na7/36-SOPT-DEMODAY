@@ -1,37 +1,18 @@
 'use client';
 
-import { useRef } from 'react';
-
-import { motion, useInView } from 'motion/react';
+import FadeInView from '@/components/common/FadeInView';
 
 export default function DescriptionSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
-
   return (
-    <motion.section
-      ref={ref}
-      className="px-[2rem]"
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-    >
-      <motion.h1
-        className="title1_sb_18 mb-[2rem]"
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-      >
-        Momentum: <br />
-        축적된 움직임이 그려낸 단 하나의 궤도
-      </motion.h1>
+    <FadeInView className="px-[2rem]" distance={50} duration={0.8} amount={0.3}>
+      <FadeInView delay={0.2}>
+        <h1 className="title1_sb_18 mb-[2rem]">
+          Momentum: <br />
+          축적된 움직임이 그려낸 단 하나의 궤도
+        </h1>
+      </FadeInView>
 
-      <motion.div
-        className="body2_r_14"
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
-      >
+      <FadeInView className="body2_r_14" delay={0.4}>
         <p>
           국내 최대 규모 대학생연합 IT벤처창업 동아리 SOPT에서 데모데이
           &lt;Momentum: 축적된 움직임이 그려낸 단 하나의 궤도&gt;를 개최합니다.
@@ -55,7 +36,7 @@ export default function DescriptionSection() {
           모여 단 하나의 프로덕트로 빛날 수 있도록, 우리는 오늘도 한 걸음 앞으로
           나아갑니다.
         </p>
-      </motion.div>
-    </motion.section>
+      </FadeInView>
+    </FadeInView>
   );
 }

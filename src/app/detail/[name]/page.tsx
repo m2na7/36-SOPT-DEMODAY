@@ -3,10 +3,9 @@
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 
-import { motion } from 'motion/react';
-
 import LinkButton from '@/components/button/LinkButton';
 import ProfileCard from '@/components/card/ProfileCard';
+import FadeIn from '@/components/common/FadeIn';
 import {
   APPJAM_PRODUCTS,
   SOPTERM_PRODUCTS,
@@ -32,40 +31,30 @@ export default function DetailPage() {
   }
 
   return (
-    <motion.main
+    <FadeIn
       className="bg-black px-[2rem] py-[2.4rem] text-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      distance={0}
+      duration={0.5}
     >
-      <motion.div
+      <FadeIn
         className="w-[clamp(33.5rem, 89vw, 43rem)] relative mb-[2rem] aspect-[335/210] max-w-[100%] overflow-hidden rounded-[5px]"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        variant="scaleIn"
+        duration={0.6}
+        delay={0.2}
       >
         <Image src={product.mainImageUrl} alt={product.name} fill />
-      </motion.div>
+      </FadeIn>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-      >
+      <FadeIn distance={20} delay={0.4}>
         <ProfileCard
           name={product.name}
           category={product.category}
           service={product.service as '앱 서비스' | '웹 서비스'}
           logoUrl={product.logoUrl}
         />
-      </motion.div>
+      </FadeIn>
 
-      <motion.div
-        className="my-[1.6rem]"
-        initial={{ opacity: 0, scaleX: 0 }}
-        animate={{ opacity: 1, scaleX: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-      >
+      <FadeIn className="my-[1.6rem]" variant="scaleInX" delay={0.6}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -76,33 +65,24 @@ export default function DetailPage() {
         >
           <path d="M0 1H335" stroke="#3C3E41" strokeDasharray="3 3" />
         </svg>
-      </motion.div>
+      </FadeIn>
 
-      <motion.div
+      <FadeIn
         className="flex items-center gap-[0.6rem]"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        variant="fadeInRight"
+        distance={20}
+        delay={0.7}
       >
         <p className="body2_r_14 whitespace-pre-line text-gray-200">
           {product.introduction}
         </p>
-      </motion.div>
+      </FadeIn>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
+      <FadeIn delay={0.8}>
         <MemberSection members={product.members} />
-      </motion.div>
+      </FadeIn>
 
-      <motion.div
-        className="mt-[2.4rem] flex flex-col"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.9 }}
-      >
+      <FadeIn className="mt-[2.4rem] flex flex-col" delay={0.9}>
         {product.descriptionImageUrl.map((url, idx) => (
           <div key={idx}>
             <Image
@@ -115,17 +95,13 @@ export default function DetailPage() {
             />
           </div>
         ))}
-      </motion.div>
+      </FadeIn>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.0 }}
-      >
+      <FadeIn delay={1.0}>
         <div className="mt-[3.8rem] mb-[4rem] flex justify-center">
           <LinkButton withInViewAnimation={false} animationDelay={0.6} />
         </div>
-      </motion.div>
-    </motion.main>
+      </FadeIn>
+    </FadeIn>
   );
 }
