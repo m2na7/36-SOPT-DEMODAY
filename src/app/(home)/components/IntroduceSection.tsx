@@ -10,6 +10,8 @@ import FadeInView from '@/components/common/FadeInView';
 export default function IntroduceSection() {
   return (
     <FadeInView className="mt-[4rem] px-[2rem]" distance={50} duration={0.8}>
+      <div className="mb-[4rem] h-[0.05rem] bg-white" />
+
       <FadeInView delay={0.2}>
         <h2 className="title1_sb_18 mb-[2rem]">행사 개요</h2>
       </FadeInView>
@@ -98,7 +100,7 @@ export default function IntroduceSection() {
         </div>
       </FadeInView>
 
-      <FadeInView delay={0.6}>
+      <FadeInView delay={0.4}>
         <h4 className="body3_r_12 text-white-50 mt-[4rem]">후원사 및 협력사</h4>
 
         <Image

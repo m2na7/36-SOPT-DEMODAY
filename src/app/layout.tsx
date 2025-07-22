@@ -8,7 +8,7 @@ import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 
 export const metadata: Metadata = {
-  title: 'SOPT 데모데이',
+  title: 'AT SOPT 데모데이',
   description: '36기 AT SOPT 데모데이',
   keywords: [
     'SOPT',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     apple: '/favicon.ico',
   },
   openGraph: {
-    title: 'SOPT 데모데이',
+    title: 'AT SOPT 데모데이',
     description: '36기 AT SOPT 데모데이',
     images: ['/assets/og-image.png'],
     url: 'https://demoday-at.sopt.org',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SOPT 데모데이',
+    title: 'AT SOPT 데모데이',
     description: '36기 AT SOPT 데모데이',
     images: ['/assets/og-image.png'],
   },

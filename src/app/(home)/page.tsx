@@ -7,11 +7,11 @@ import ImageSection from './components/ImageSection';
 import IntroduceSection from './components/IntroduceSection';
 
 export const metadata: Metadata = {
-  title: 'SOPT 데모데이',
+  title: 'AT SOPT 데모데이',
   description:
     '36기 AT SOPT 데모데이 공식 웹 페이지입니다. 다양한 서비스들을 만나보세요.',
   openGraph: {
-    title: 'SOPT 데모데이',
+    title: 'AT SOPT 데모데이',
     description:
       '36기 AT SOPT 데모데이 공식 웹 페이지입니다. 다양한 서비스들을 만나보세요.',
     images: ['/assets/og-image.png'],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SOPT 데모데이',
+    title: 'AT SOPT 데모데이',
     description:
       '36기 AT SOPT 데모데이 공식 웹 페이지입니다. 다양한 서비스들을 만나보세요.',
     images: ['/assets/og-image.png'],
@@ -34,8 +34,6 @@ export default function HomePage() {
       <DescriptionSection />
 
       <LinkButton withInViewAnimation={false} animationDelay={0.6} />
-
-      <div className="h-[0.05rem] bg-white" />
 
       <IntroduceSection />
     </main>

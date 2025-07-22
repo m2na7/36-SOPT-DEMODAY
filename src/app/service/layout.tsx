@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'SOPT 데모데이 - 서비스 소개',
+  title: 'AT SOPT 데모데이 - 서비스 소개',
   description:
     '36기 AT SOPT 데모데이 서비스 소개 페이지입니다. 앱잼, 솝텀, 메이커스 팀의 다양한 서비스들을 만나보세요.',
   openGraph: {
