@@ -19,7 +19,7 @@ export default function Menu({ isOpen, onClose }: Props) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed top-[clamp(7.2rem,19.2vw,8.2rem)] right-0 left-0 z-40 mx-auto max-w-[430px]"
+          className="fixed top-[clamp(7.2rem,19.2vw,8.2rem)] right-0 left-0 z-40 mx-auto max-w-[768px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
