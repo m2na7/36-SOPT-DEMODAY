@@ -1,13 +1,16 @@
 'use client';
 
-import AppJamSection from '@/app/service/components/AppJamSection';
-import MakersSection from '@/app/service/components/MakersSection';
-import SoptermSection from '@/app/service/components/SoptermSection';
+import ProductSection from '@/app/service/components/ProductSection';
 import FadeIn from '@/components/common/FadeIn';
 import FadeInTransition from '@/components/common/FadeInTransition';
 import Tab from '@/components/tab/Tab';
 import { TABS } from '@/constants/tab';
 import { useTab } from '@/hooks/useTab';
+import {
+  APPJAM_PRODUCTS,
+  SOPTERM_PRODUCTS,
+  MAKERS_PRODUCT,
+} from '@/mocks/products';
 
 export default function ServicePage() {
   const { activeTab, setActiveTab } = useTab();
@@ -15,13 +18,31 @@ export default function ServicePage() {
   const renderContent = () => {
     switch (activeTab) {
       case TABS.APPJAM:
-        return <AppJamSection key="appjam" />;
+        return (
+          <ProductSection
+            key={TABS.APPJAM}
+            products={APPJAM_PRODUCTS}
+            shuffleProducts
+          />
+        );
       case TABS.SOPTERM:
-        return <SoptermSection key="sopterm" />;
+        return (
+          <ProductSection
+            key={TABS.SOPTERM}
+            products={SOPTERM_PRODUCTS}
+            shuffleProducts
+          />
+        );
       case TABS.MAKERS:
-        return <MakersSection key="makers" />;
+        return <ProductSection key={TABS.MAKERS} products={[MAKERS_PRODUCT]} />;
       default:
-        return <AppJamSection key="appjam" />;
+        return (
+          <ProductSection
+            key="appjam"
+            products={APPJAM_PRODUCTS}
+            shuffleProducts
+          />
+        );
     }
   };
 

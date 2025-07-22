@@ -35,7 +35,7 @@ export default function ProductCard({
       }}
       style={{ touchAction: 'manipulation' }}
     >
-      <div className="relative mb-[1.2rem] size-[clamp(16.2rem,43.2vw,18.6rem)] overflow-hidden rounded-lg">
+      <div className="relative mb-[1.2rem] aspect-square w-full overflow-hidden rounded-lg">
         <Image
           src={thumbnailUrl ?? logoUrl ?? ''}
           alt={name}
