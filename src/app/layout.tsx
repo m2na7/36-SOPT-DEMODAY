@@ -21,10 +21,7 @@ export const metadata: Metadata = {
     '디자인',
   ],
   icons: {
-    icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-    ],
+    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },
@@ -33,7 +30,7 @@ export const metadata: Metadata = {
     description: '36기 AT SOPT 데모데이',
     images: ['/assets/og-image.png'],
     url: 'https://demoday-at.sopt.org',
-    siteName: 'SOPT 데모데이',
+    siteName: 'AT SOPT 데모데이',
     locale: 'ko_KR',
     type: 'website',
   },
